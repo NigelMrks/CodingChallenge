@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.codingchallenge.ui.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_anagramFragment"
+            app:destination="@id/anagramFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_primeNumberFragment"
+            app:destination="@id/primeNumberFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_fibonacciFragment"
+            app:destination="@id/fibonacciFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/anagramFragment"
+        android:name="com.example.codingchallenge.ui.AnagramFragment"
+        android:label="AnagramFragment"
+        tools:layout="@layout/fragment_anagram" >
+        <action
+            android:id="@+id/action_anagramFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_anagramFragment_to_primeNumberFragment"
+            app:destination="@id/primeNumberFragment" />
+        <action
+            android:id="@+id/action_anagramFragment_to_fibonacciFragment"
+            app:destination="@id/fibonacciFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/primeNumberFragment"
+        android:name="com.example.codingchallenge.ui.PrimeNumberFragment"
+        android:label="PrimeNumberFragment"
+        tools:layout="@layout/fragment_primenumber">
+        <action
+            android:id="@+id/action_primeNumberFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_primeNumberFragment_to_anagramFragment"
+            app:destination="@id/anagramFragment" />
+        <action
+            android:id="@+id/action_primeNumberFragment_to_fibonacciFragment"
+            app:destination="@id/fibonacciFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fibonacciFragment"
+        android:name="com.example.codingchallenge.ui.FibonacciFragment"
+        android:label="FibonacciFragment"
+        tools:layout="@layout/fragment_fibonacci">
+        <action
+            android:id="@+id/action_fibonacciFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_fibonacciFragment_to_primeNumberFragment"
+            app:destination="@id/primeNumberFragment" />
+        <action
+            android:id="@+id/action_fibonacciFragment_to_anagramFragment"
+            app:destination="@id/anagramFragment" />
+    </fragment>
+</navigation>
